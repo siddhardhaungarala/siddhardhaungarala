@@ -14,6 +14,7 @@
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4.4.1/dist/email.min.js"></script>
     <!-- Custom CSS -->
+     <link rel="shortcut icon" href="img/gallery/IMG_4.jpg" type="image/x-icon">
     <style>
         :root {
             --primary-color: #467C82;
@@ -362,7 +363,7 @@
 
         footer {
             background-color: var(--secondary-bg);
-            color: var(--dark-primary);
+            color: var(--text-color);
             padding: 25px 0;
             text-align: center;
             box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -604,6 +605,10 @@
                     <div class="skills-bar">
                         <div class="skills-bar-fill" style="--skill-width: 90%;"></div>
                     </div>
+                    <p>Flutter</p>
+                    <div class="skills-bar">
+                        <div class="skills-bar-fill" style="--skill-width: 30%;"></div>
+                    </div>
                     <p>Web Development (HTML, CSS, JavaScript)</p>
                     <div class="skills-bar">
                         <div class="skills-bar-fill" style="--skill-width: 85%;"></div>
@@ -666,6 +671,29 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6 mb-4">
                         <div class="card">
+                            <img src="../img/screenshot-1750574481849.png" class="project-img"
+                                alt="E-commerce Website">
+                            <div class="card-body">
+                                <h5 class="card-title">E-commerce Website for AK-Technologies using React</h5>
+                                <p class="card-text">Designed and developed a fully responsive e-commerce website using
+                                    ReactJs and Firebase for backend support and authentication. <a
+                                        href="https://aktechnologies.in/" target="_blank">View Project</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card">
+                            <img src="img/screenshot-1750574912496.png" class="project-img"
+                                alt="E-commerce Website">
+                            <div class="card-body">
+                                <h5 class="card-title">A ToDo Mobile Application using Flutter</h5>
+                                <p class="card-text">Designed and developed a fully working  using
+                                    Flutter and Firebase for backend support and authentication. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card">
                             <img src="img/Screenshot 2025-05-06 152929.png" class="project-img"
                                 alt="E-commerce Website">
                             <div class="card-body">
@@ -715,6 +743,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">2-Day Offline Workshop on AI/ML</h5>
                                 <p class="card-text">IISc Bangalore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">90-Days Offline Internship on Web Development</h5>
+                                <p class="card-text">Ak-Technologies</p>
                             </div>
                         </div>
                     </div>
@@ -783,8 +819,20 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="card-body">
+                                <h5 class="card-title">90-Days Internship at AK-Technologies Pvt. Ltd.</h5>
+                                <p class="card-text">May 2025 - August 2025</p>
+                                <p class="card-text">Led the design and development of a responsive e-commerce website
+                                    using ReactJs and Firebase. Implemented secure user
+                                    authentication and real-time database integration, boosting user engagement .
+                                    Collaborated with a team of 2 developers to optimize performance and ensure
+                                    cross-browser compatibility. And Also Learned the PCB designing and Solaring of a Hardware Engineering
+                                    and 3D Prinitng with Hands-ON experience</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
                                 <h5 class="card-title">Web Development Intern at AK-Technologies Pvt. Ltd.</h5>
-                                <p class="card-text">March 2024 - June 2024</p>
+                                <p class="card-text">December 2025 - April 2025</p>
                                 <p class="card-text">Led the design and development of a responsive e-commerce website
                                     using HTML, CSS, JavaScript, AJAX, and Firebase. Implemented secure user
                                     authentication and real-time database integration, boosting user engagement by 30%.
@@ -887,9 +935,7 @@
         <!-- Footer -->
         <footer>
             <div class="container">
-                
-                <p class="mt-2">© 2025 Siddhardh Ungarala. All rights reserved.</p>
-                <br>
+                <p>developed by @alwayssiddhardh</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/siddharadh-ungarala" target="_blank"><i
                         class="fab fa-linkedin"></i></a>
@@ -901,10 +947,9 @@
                             <a href="https://www.snapchat.com/add/alwayssiddhardh" target="_blank"><i
                                 class="fab fa-snapchat"></i></a>
                             </div>
-                            <br>
-                            <p>developed by @alwayssiddhardh</p>
-                            
+                            <p>Innovating with AI/ML and Web Development</p>
                 <p>Contact: alwayssiddhardh@gmail.com</p>
+                <p class="mt-2">© 2025 Siddhardh Ungarala. All rights reserved.</p>
             </div>
         </footer>
     </div>
@@ -981,7 +1026,6 @@
             }
         }
 
-console.log
         // Smooth Scroll and Close Navbar on Link Click
         $('a.nav-link').click(function (e) {
             e.preventDefault();
@@ -998,6 +1042,7 @@ console.log
         function initializeEmailJS() {
             if (typeof emailjs !== 'undefined') {
                 emailjs.init('n8T_DQNlQ9nZNgBw2');
+                console.log('EmailJS initialized successfully');
             } else {
                 console.error('EmailJS SDK not loaded. Retrying in 1 second...');
                 setTimeout(initializeEmailJS, 1000);
